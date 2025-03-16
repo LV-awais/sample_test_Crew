@@ -2,7 +2,6 @@
 import sys
 import warnings
 
-from datetime import datetime
 
 from research_assistant.crew import ResearchAssistant
 
@@ -18,8 +17,10 @@ def run():
     Run the crew.
     """
     inputs = {
-        'topic': 'AI LLMs',
-        'current_year': str(datetime.now().year)
+       
+        'topic': 'Ubiquiti',
+        'country': "USA"
+    
     }
     
     try:
@@ -33,7 +34,8 @@ def train():
     Train the crew for a given number of iterations.
     """
     inputs = {
-        "topic": "AI LLMs"
+        'topic': 'Ubiquiti',
+        'country': "USA"
     }
     try:
         ResearchAssistant().crew().train(n_iterations=int(sys.argv[1]), filename=sys.argv[2], inputs=inputs)
@@ -56,8 +58,8 @@ def test():
     Test the crew execution and returns the results.
     """
     inputs = {
-        "topic": "AI LLMs",
-        "current_year": str(datetime.now().year)
+        'topic': 'Ubiquiti',
+        'country': "USA"
     }
     try:
         ResearchAssistant().crew().test(n_iterations=int(sys.argv[1]), openai_model_name=sys.argv[2], inputs=inputs)
