@@ -19,7 +19,7 @@ def run():
     inputs = {
        
         'topic': 'Ubiquiti',
-        'country': "USA"
+        'country': "USA",
     
     }
     
@@ -35,7 +35,7 @@ def train():
     """
     inputs = {
         'topic': 'Ubiquiti',
-        'country': "USA"
+        'country': "USA",
     }
     try:
         ResearchAssistant().crew().train(n_iterations=int(sys.argv[1]), filename=sys.argv[2], inputs=inputs)
@@ -59,7 +59,7 @@ def test():
     """
     inputs = {
         'topic': 'Ubiquiti',
-        'country': "USA"
+        'country': "USA",
     }
     try:
         ResearchAssistant().crew().test(n_iterations=int(sys.argv[1]), openai_model_name=sys.argv[2], inputs=inputs)
